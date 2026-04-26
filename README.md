@@ -99,3 +99,30 @@ The system helps recruiters identify candidates who are both:
 - Genuinely interested  
 
 This reduces manual effort and improves hiring efficiency.
+
+---
+
+## 🧪 Sample Input
+
+**Job Description:**
+Looking for Python Backend Developer with Flask and 2+ years experience
+**Candidates:**
+[
+  {
+    "name": "Rahul Sharma",
+    "skills": ["Python", "Flask", "SQL"],
+    "experience": 2,
+    "location": "Hyderabad",
+    "summary": "Backend developer"
+  }
+]
+
+---
+
+## 📊 Sample Output
+
+- Match Score: 70+
+- Interest Score: 65+
+- Final Score: Ranked output
+- Explanation of selected candidate
+- Skill gap analysis
