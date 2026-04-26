@@ -48,3 +48,54 @@ http://localhost:8501
 - Final ranking
 - Skill gap analysis
 - Explainable results
+
+---
+
+## 🏗️ Architecture Diagram
+
+![Architecture](architecture.png)
+
+---
+
+## 🧠 System Architecture
+
+The system follows a modular pipeline:
+
+1. Job Description is provided by the user  
+2. JD Parser (LLM) extracts skills, role, and experience  
+3. Candidates are sourced (built-in / JSON / CSV / AI-generated)  
+4. Matching Engine computes Match Score using:
+   - Skill overlap (keyword matching)
+   - Semantic similarity (embeddings)
+   - Experience matching  
+5. Conversation Agent simulates candidate response  
+6. Interest Score is generated using AI  
+7. Final Score is calculated using weighted combination  
+8. Candidates are ranked and displayed in the UI  
+
+---
+
+## 📊 Scoring Logic
+
+**Match Score (0–100):**
+- Skill Match → 40%  
+- Semantic Similarity → 40%  
+- Experience Match → 20%  
+
+**Interest Score (0–100):**
+- Generated using AI conversation  
+- Evaluates willingness, enthusiasm, and role alignment  
+
+**Final Score:**
+Final Score = 0.6 × Match Score + 0.4 × Interest Score
+
+
+---
+
+## 🎯 Outcome
+
+The system helps recruiters identify candidates who are both:
+- Technically qualified  
+- Genuinely interested  
+
+This reduces manual effort and improves hiring efficiency.
